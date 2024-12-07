@@ -85,7 +85,12 @@ public class HeadlinesFrgment extends Fragment {
 
     private void showSuggestions(String query) {
         suggestions.clear();
-        List<String> allSuggestions = Arrays.asList("headline", "health", "technology", "sports" , "trading","financial");
+        List<String> allSuggestions = Arrays.asList(
+                "Headline", "World", "Politics", "Business", "Technology", "Health",
+                "Sports", "Entertainment", "Science", "Environment", "Education",
+                "Lifestyle", "Travel", "Food", "Fashion", "Crime", "Weather",
+                "Opinion", "Culture", "History", "Real Estate", "Financial", "Trading"
+        );
         for (String term : allSuggestions) {
             if (term.toLowerCase().startsWith(query.toLowerCase())) {
                 suggestions.add(term + " news");
